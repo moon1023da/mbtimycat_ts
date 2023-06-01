@@ -1,11 +1,11 @@
 import React from 'react';
 
+import { ResultData } from '../stores/Result/ResultData';
+
 function ResultPage(): React.ReactElement {
-  return (
-    <div>
-      이곳은 결과페이지입니다.
-    </div>
-  );
+
+  return <img src={ResultData[0].image} width={450} height={350} />;
+  
 }
 
 export default ResultPage;

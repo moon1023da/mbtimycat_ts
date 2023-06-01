@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: "yangjin";
 }
 
 .App-logo {
@@ -7,7 +8,14 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+@font-face {
+  font-family: '양진체';
+  src: url('https://cdn.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
@@ -35,4 +43,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
