@@ -1,19 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Image} from "react-bootstrap"
+import { Image, Button } from "react-bootstrap"
 import { useSearchParams } from 'react-router-dom';
 
 import { ResultData } from '../stores/Result/ResultData';
 import Header from '../components/Header';
 import { IResult } from '../stores/Result/types';
+import KakaoShareButton from '../components/KakaoShareButton';
 
 function ResultPage(): React.ReactElement {
   const [searchParams] = useSearchParams();
   const mbti = searchParams.get("mbti"); //예비집사의mbti
-  const testResult = ResultData.find((cat: IResult) => cat.best === mbti);
+  const testResult: IResult = ResultData.find((cat: IResult) => cat.best === mbti)??{
+    id:0,
+    name:"",
+    best:"",
+    desc:"",
+    image:"",
+    mbti:"",
+  };
   const friendCat = ResultData.find(friend => friend.best === testResult?.mbti);
-
-  console.log({testResult});
 
   return (
     <>
@@ -42,6 +48,11 @@ function ResultPage(): React.ReactElement {
           <BestDsc>나의 고양이와 잘맞는 형제묘는? </BestDsc>
           <BestDsc>{friendCat?.name} 을(를) 추천드려요😸</BestDsc>
         </Commend>
+        <div style={{marginBottom:40}}>
+          <Button className='btn-danger' style={{width:170, marginTop:20, marginRight:20}}>테스트 다시하기
+          </Button>
+          <KakaoShareButton data={testResult}/>
+          </div>
       </ContentsWrapper>
     </Wrapper>
   </>);
