@@ -14,7 +14,7 @@ function KakaoShareButton(props:Props) {
 
   React.useEffect(()=> {
     // KaKaoSDK.init 앱시작시 중복호출 방지
-    if(!Kakao.isInitialized){
+    if(!Kakao.isInitialized()){
       Kakao.init("9d08a345cd3d3b1c6ee4cd1544d5f8d9");
     } 
   }, [])
