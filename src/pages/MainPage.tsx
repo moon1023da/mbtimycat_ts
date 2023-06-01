@@ -53,6 +53,7 @@ const ContentsWrapper = styled.div`
 const Title = styled.div`
   margin-top: 20px;
   font-size: 20pt;
+
 `;
 
 const LogoImage = styled.div`
@@ -64,5 +65,6 @@ const LogoImage = styled.div`
 
 const Dsc = styled.div`
   font-weight: 600;
+  font-size: 20pt;
 `;
 

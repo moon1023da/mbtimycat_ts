@@ -46,4 +46,5 @@ const TitleWrapper = styled.div`
   display: flex;
   justify-content: center;
   font-family: "양진체";
+  padding-top: 10px;
 `;
