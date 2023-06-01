@@ -6,10 +6,16 @@ import { useNavigate, useSearchParams } from 'react-router-dom';
 import { ResultData } from '../stores/Result/ResultData';
 import Header from '../components/Header';
 import CatImage from '../assets/img/치즈냥.jpg';
+import { IResult } from '../stores/Result/types';
 
 function ResultPage(): React.ReactElement {
   const [searchParams] = useSearchParams();
-  const mbti = searchParams.get("mbti");
+  const mbti = searchParams.get("mbti"); //예비집사의mbti
+  const testResult = ResultData.find((cat: IResult) => cat.best === mbti);
+  const friendCat = ResultData.find(friend => friend.best === testResult?.mbti);
+
+  console.log({testResult});
+
   return (
     <>
       <Wrapper>
@@ -19,14 +25,18 @@ function ResultPage(): React.ReactElement {
         <ResultImage>
           <Image 
           className="rounded-circle" 
-          src={CatImage} 
+          src={testResult?.image} 
           width={300} 
           height={300}/>
           
         </ResultImage>
         <Dsc>
-          예비집사님과 찰떡궁합인 고양이는?{mbti}형 고양이 아비시니안입니다.
+          {testResult?.best}형 예비집사님과 찰떡궁합인 고양이는?{testResult?.mbti}형 고양이{" "}{testResult?.name}입니다.
         </Dsc>
+        <Dsc>
+          {testResult?.name} 고양이는 {testResult?.desc}
+        </Dsc>
+        <BestDsc>나의 고양이와 잘맞는 형제묘는? {friendCat?.name} 추천드려요😸</BestDsc>
       </ContentsWrapper>
     </Wrapper>
   </>);
@@ -50,7 +60,7 @@ const ContentsWrapper = styled.div`
   justify-content: center;
   flex-direction: column;
   margin-top: 20px;
-  padding: 20px;
+  padding: 60px 20px;
 `;
 
 const Title = styled.div`
@@ -65,5 +75,10 @@ const ResultImage = styled.div`
   margin-bottom: 20px;
 `;
 const Dsc = styled.div`
-  font-size: 20pt;
+  font-size: 16pt;
+`;
+
+const BestDsc = styled.div`
+font-size: 14pt;
+ color: tomato;
 `;
