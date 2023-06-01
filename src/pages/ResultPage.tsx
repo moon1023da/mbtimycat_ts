@@ -1,11 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Button, Image} from "react-bootstrap"
-import { useNavigate, useSearchParams } from 'react-router-dom';
+import { Image} from "react-bootstrap"
+import { useSearchParams } from 'react-router-dom';
 
 import { ResultData } from '../stores/Result/ResultData';
 import Header from '../components/Header';
-import CatImage from '../assets/img/치즈냥.jpg';
 import { IResult } from '../stores/Result/types';
 
 function ResultPage(): React.ReactElement {
@@ -30,13 +29,19 @@ function ResultPage(): React.ReactElement {
           height={300}/>
           
         </ResultImage>
-        <Dsc>
-          {testResult?.best}형 예비집사님과 찰떡궁합인 고양이는?{testResult?.mbti}형 고양이{" "}{testResult?.name}입니다.
-        </Dsc>
-        <Dsc>
+        <FirstDsc>
+          {testResult?.best}형 당신과 찰떡궁합인 냥이는?
+        </FirstDsc>  
+        <TwiceDsc>
+          {testResult?.mbti}형 {" "}{testResult?.name}입니다.
+        </TwiceDsc>
+        <TriDsc>
           {testResult?.name} 고양이는 {testResult?.desc}
-        </Dsc>
-        <BestDsc>나의 고양이와 잘맞는 형제묘는? {friendCat?.name} 추천드려요😸</BestDsc>
+        </TriDsc>
+        <Commend>
+          <BestDsc>나의 고양이와 잘맞는 형제묘는? </BestDsc>
+          <BestDsc>{friendCat?.name} 을(를) 추천드려요😸</BestDsc>
+        </Commend>
       </ContentsWrapper>
     </Wrapper>
   </>);
@@ -48,7 +53,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background: #fffacd;
   font-family: "양진체";
 
@@ -59,26 +64,54 @@ const ContentsWrapper = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-top: 20px;
-  padding: 60px 20px;
+  padding: 50px 50px;
 `;
 
 const Title = styled.div`
-  margin-top: 20px;
   font-size: 28pt;
-
 `;
+
 const ResultImage = styled.div`
   width: 200;
   height: 200;
   margin-top: 10px;
   margin-bottom: 20px;
 `;
-const Dsc = styled.div`
-  font-size: 16pt;
+
+
+const FirstDsc = styled.div`
+  font-size: 14pt;
+  color: rgb(96 92 92);
+`;
+
+const TwiceDsc = styled.div`
+  background: pink;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 18pt;
+  text-align: center;
+`;
+
+const TriDsc = styled.div`
+  font-size: 14pt;
+`;
+
+const Commend = styled.div`
+  display: block;
+  font-size: 14pt;
+  color: white;
+  background-color:tomato;
+  border-radius:10px;
+  margin-top: 20px;
+  padding: 20px;
+  text-align: center;
 `;
 
 const BestDsc = styled.div`
-font-size: 14pt;
- color: tomato;
+  
 `;
+
+
+
+

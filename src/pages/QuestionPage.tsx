@@ -60,7 +60,7 @@ function QuestionPage(): React.ReactElement{
             marginRight:"20px",
             width: "45%",
             minHeight: "200px",
-            fontSize: "15pt",
+            fontSize: "14pt",
           }} 
           onClick={() =>
             handleCickAnswer(1, QuestionData[questionNo].type)
@@ -70,10 +70,9 @@ function QuestionPage(): React.ReactElement{
           </Button>
           <Button className="btn-warning" 
           style={{
-            marginRight:"20px",
             width: "45%",
             minHeight: "200px",
-            fontSize: "15pt",
+            fontSize: "14pt",
           }} 
           onClick={() =>
             handleCickAnswer(2, QuestionData[questionNo].type)
@@ -105,7 +104,7 @@ const ContentsWrapper = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 20px;
+  padding: 30px;
 `;
 
 const Title = styled.div`
@@ -113,6 +112,7 @@ const Title = styled.div`
   font-size: 25pt;
   min-width: 380px;
   text-align: center;
+  padding: 20px;
 
 `;
 
@@ -125,4 +125,7 @@ const ButtonGroup = styled.div`
  button{
   font-size: 16pt;
  };
+ button:hover {
+  background:orange;
+ }
 `

@@ -3,7 +3,7 @@ import { IQuestion } from "./types";
 export const QuestionData: IQuestion[] = [
   {
    id:1,
-   title: "고양이를 키우게 되었다! 나의 반응은?",
+   title: "고양이를 키우게 되었다 무엇부터 할까?",
    anwsera: "이름은 뭐가 좋을까? 어디에서왔니? 자꾸 말을 걸고 싶다.",
    anwserb: "혼자만의 시간이 필요하겠지? 넘나 들이대고 싶지만 꾹 참고 적응할 시간을 준다",
    type: "EI",

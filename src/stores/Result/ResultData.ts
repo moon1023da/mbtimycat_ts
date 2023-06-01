@@ -122,7 +122,7 @@ export const ResultData: IResult[] = [
     name:'먼치킨',
     best:'INFJ',
     mbti:'ESFP',
-    desc:'짧은 다리와 ',
+    desc:'호기심 많고 활발한 먼치킨! 애교가 많고 집사품을 너무 좋아하는 친구에요',
     image:`${Munchkin}`,
   },
   {
@@ -146,7 +146,7 @@ export const ResultData: IResult[] = [
     name:'메인쿤',
     best:'ENTJ',
     mbti:'INTJ',
-    desc:'거인 신사라는 별명을 가진 고양이에요! 조용하고 온화한 성격을 가지고 있으며 매우 똑똑하고 크기와 큰 고양이에요',
+    desc:'사람을 좋아하는 애정이 많은 친구! 느긋하고 태평스러운 성격으로 덩치와 안맞게 귀여운 목소리를 가졌어요',
     image:`${Maincun}`,
   },
 

@@ -17,13 +17,12 @@ function MainPage() :React.ReactElement {
       <Wrapper>
         <Header type="title" questionNo={0}/>
         <ContentsWrapper>
-          <Title>나와 맞는 주인님은?!!</Title>
+          <Title>고양이와 나의 mbti궁합</Title>
           <LogoImage>
             <img className="rounded-circle" src={CatImage} width={300} height={300}/>
           </LogoImage>
-          <Dsc>MBTI를 기반으로 하는 나와 잘맞는 고양이 찾기!</Dsc>
-          <Dsc>내가 집사가 되어 고양이를 키운다면 ??</Dsc>
-          <Button className="btn-danger" onClick={handleClickButton} style={{fontSize:25, marginTop:20, marginBottom:20}}>테스트 시작하기</Button>
+          <Dsc>나의 MBTI와 잘 맞는 주인님은 누굴까?</Dsc>
+          <Button className="btn-danger" onClick={handleClickButton} style={{fontSize:25, marginTop:20, marginBottom:20, padding:20}}>테스트 시작하기</Button>
         </ContentsWrapper>
       </Wrapper>
     </>
@@ -52,7 +51,7 @@ const ContentsWrapper = styled.div`
 
 const Title = styled.div`
   margin-top: 20px;
-  font-size: 20pt;
+  font-size: 18pt;
 
 `;
 
@@ -64,7 +63,8 @@ const LogoImage = styled.div`
 `;
 
 const Dsc = styled.div`
-  font-weight: 600;
+  padding: 10px 20px;
   font-size: 20pt;
+  text-align: center;
 `;
 
