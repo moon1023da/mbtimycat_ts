@@ -24,6 +24,7 @@ function MainPage() :React.ReactElement {
           <Dsc>나의 MBTI와 잘 맞는 주인님은 누굴까?</Dsc>
           <Button className="btn-danger" onClick={handleClickButton} style={{fontSize:25, marginTop:20, marginBottom:20, padding:20}}>테스트 시작하기</Button>
         </ContentsWrapper>
+        <div className="adfit"/>
       </Wrapper>
     </>
   );
