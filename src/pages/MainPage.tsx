@@ -5,6 +5,7 @@ import { Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
 import CatImage from '../assets/img/치즈냥.jpg';
+import Header from '../components/Header';
 
 function MainPage() :React.ReactElement {
   const navigate = useNavigate();
@@ -14,7 +15,7 @@ function MainPage() :React.ReactElement {
   return (
     <>
       <Wrapper>
-        {/* <Header></Header> */}
+        <Header type="title" questionNo={0}/>
         <ContentsWrapper>
           <Title>나와 맞는 주인님은?!!</Title>
           <LogoImage>
@@ -35,20 +36,11 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100:vh;
+  height: 100vh;
   background: #fffacd;
   font-family: "양진체";
 
 `;
-
-// const Header = styled.div`
-//   background: #ffa07a;
-//   font-size: 40px;
-//   align-items: center;
-//   display: flex;
-//   justify-content: center;
-//   font-family: "양진체";
-// `;
 
 const ContentsWrapper = styled.div`
   align-items: center;
