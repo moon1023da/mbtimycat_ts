@@ -28,7 +28,7 @@ function KakaoShareButton(props: Props) {
       content: {
         title: '😺예비집사 판별기 결과😻',
         description: `예비 집사님이 고양이를 키운다면 가장 잘맞는 고양이는 ${props.data.name}입니다.`,
-        imageUrl: url + '이미지 경로',
+        imageUrl: url + props.data.image,
         link: {
           mobileWebUrl: resultUrl,
           webUrl: resultUrl,
@@ -43,8 +43,8 @@ function KakaoShareButton(props: Props) {
         {
           title: '나도 테스트하러가기',
           link: {
-            mobileWebUrl: resultUrl,
-            webUrl: resultUrl,
+            mobileWebUrl: "https://catmbtits.netlify.app",
+            webUrl: "https://catmbtits.netlify.app",
           },
         },
       ],
