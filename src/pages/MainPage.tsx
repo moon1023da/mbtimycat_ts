@@ -21,8 +21,8 @@ function MainPage() :React.ReactElement {
           <LogoImage>
             <img className="rounded-circle" src={CatImage} width={300} height={300}/>
           </LogoImage>
-          <Dsc>나의 MBTI와 잘 맞는 주인님은 누굴까?</Dsc>
-          <Button className="btn-danger" onClick={handleClickButton} style={{fontSize:25, marginTop:20, marginBottom:20, padding:20}}>테스트 시작하기</Button>
+          <Dsc>나의 MBTI와 잘 맞는 고양이는?</Dsc>
+          <Button className="btn-danger" onClick={handleClickButton} style={{fontSize:25, marginTop:0, marginBottom:10, padding:20}}>테스트 시작하기</Button>
         </ContentsWrapper>
         <div className="adfit"/>
       </Wrapper>
@@ -51,7 +51,7 @@ const ContentsWrapper = styled.div`
 `;
 
 const Title = styled.div`
-  margin-top: 20px;
+  margin-top: 0px;
   font-size: 18pt;
 
 `;
@@ -65,7 +65,7 @@ const LogoImage = styled.div`
 
 const Dsc = styled.div`
   padding: 10px 20px;
-  font-size: 20pt;
+  font-size: 18pt;
   text-align: center;
 `;
 
