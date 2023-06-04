@@ -48,16 +48,16 @@ function ResultPage(): React.ReactElement {
           <BestDsc>나의 고양이와 잘맞는 형제묘는? </BestDsc>
           <BestDsc>{friendCat?.name} 을(를) 추천드려요😸</BestDsc>
         </Commend>
-        <div style={{marginBottom:40}}>
+        <ButtonGroup style={{marginBottom:40}}>
           <Button 
           onClick={()=> navigate("/")}
           className='btn-danger' 
-          style={{width:170, marginTop:20, marginRight:20}}
+          style={{width:140, marginTop:20, marginRight:20, padding:10}}
           >
             테스트 다시하기
           </Button>
           <KakaoShareButton data={testResult}/>
-          </div>
+          </ButtonGroup>
       </ContentsWrapper>
     </Wrapper>
   </>);
@@ -126,6 +126,10 @@ const Commend = styled.div`
 
 const BestDsc = styled.div`
   
+`;
+
+const ButtonGroup = styled.div`
+  display: flex;
 `;
 
 
